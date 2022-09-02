@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>BuyAnything</title>
+        <link rel="icon" href="assets/logo.png" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!--This is used to add star symbol in rating section-->
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <a href="main.html"><img class="logo" src="assets/logoBlack.svg" alt="logo"></a>
+                <nav>
+                    <ul class="links" id="menuItems">
+                        <li><a href="productPage.html">Shop</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="listings.html">Listings</a></li>
+                        <li><a href="aboutUs.html">About Us</a></li>
+                    </ul>
+                </nav>
+                <img class="searchIcon" src="assets/search.svg" alt="search button">
+                <img class="menuIcon" src="assets/menu.svg" alt="menu button" onclick="menuToggle()">
+            </div>
+        </header>
+        <!--Drop down menu-->
+        <div class="dropdown">
+            <button onclick="displayOptions()" class="dropbtn">Change background colour</button>
+
+            <div id="bgColour" class="dropdown-content">
+                <a href="#brown" onclick="changeBGColour('#9F8079')">Light Brown</a>
+                <a href="#blue" onclick="changeBGColour('#F89393')">Rust Red</a>
+                <a href="#grey" onclick="changeBGColour('grey')">Grey</a>
+
+            </div>
+        </div>
+        <div class="dropdown">
+            <button onclick="displayOptionsForText()" class="dropbtn">Change text colour</button>
+            <div id="textColour" class="dropdown-content">
+                <a href="#green" onclick="changeTextColour('#8BDC0D')">Light Green</a>
+                <a href="#purple" onclick="changeTextColour('#900C3F')">Purple</a>
+                <a href="#brown" onclick="changeTextColour('#CD431B')">Brown</a>
+
+            </div>
+        </div>
+        <script>
+            /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+            function displayOptions() {
+                document.getElementById("bgColour").classList.toggle("show");
+            }
+
+            function displayOptionsForText() {
+                document.getElementById("textColour").classList.toggle("show");
+            }
+
+            function changeBGColour(color){
+                document.body.style.background = color;
+
+            }
+
+            function changeTextColour(color){
+                let products = document.getElementById("p-items");
+                for(let counter = 0;counter<products.getElementsByClassName("product").length;counter++){
+                    let oneProduct = products.getElementsByClassName("product")[counter];
+                    let productInformation = oneProduct.getElementsByClassName("product-info")[0];
+                    let categoryOfTheProduct = productInformation.getElementsByClassName("product-info-top")[0];
+
+                    //To change the font colour of the category
+                    let p_category = categoryOfTheProduct.getElementsByClassName("category-title")[0];
+                    p_category.style.color = color;
+
+                    //To change the font colour of the product-name
+                    let p_name = oneProduct.getElementsByClassName("product-name")[0];
+                    p_name.style.color = color;
+                }
+
+            }
+
+
+
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn')) {
+                    let dropdowns = document.getElementsByClassName("dropdown-content");
+                    let i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        let openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        </script>
+
+
+        <div class="products">
+            <div class="container">
+                <h1 id="header">My Orders</h1>
+                <div class="product-items" id="p-items">
+                    <!-- single product -->
+                    <div class="product">
+                        <div class="product-content">
+                            <div class="product-img">
+                                <img src="assets/shoe-1.png" alt="Shoes">
+                            </div>
+                            <div class="product-btns">
+                                <button type="button" class="btn-cart">
+                                    re order again
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-info-top">
+                                <h2 class="category-title" id="categoryOfProduct1"></h2>
+                                <div class="rating">
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href="#" class="product-name" id="nameOfTheProduct1"></a>
+                            <p class="product-price" id="actualPriceOfTheProduct1"></p>
+                            <p class="product-price" id="discountedPriceOfTheProduct1"></p>
+                        </div>
+                        <div class="off-info">
+                            <h2 class="category-title" id="discountedRateOfTheProduct1"></h2>
+                        </div>
+                    </div>
+                    <!-- end of the single product -->
+
+                    <!-- single product -->
+                    <div class="product">
+                        <div class="product-content">
+                            <div class="product-img">
+                                <img src="assets/Sony-WH-1000XM4-B.png" alt="Sony headphone">
+                            </div>
+                            <div class="product-btns">
+                                <button type="button" class="btn-cart">
+                                    re order again
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-info-top">
+                                <h2 class="category-title" id="categoryOfProduct2"></h2>
+                                <div class="rating">
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="far fa-star"></i></span>                               
+                                </div>
+                            </div>
+                            <a href="#" class="product-name" id="nameOfTheProduct2" ></a>
+                            <p class="product-withoutDiscounts" id="actualPriceOfTheProduct2"></p>
+                        </div>
+                    </div>
+                    <!-- end of the single product -->
+
+                    <!-- single product -->
+                    <div class="product">
+                        <div class="product-content">
+                            <div class="product-img">
+                                <img src="assets/t-shirt%20for%20men.png" alt="T shirt for men">
+                            </div>
+                            <div class="product-btns">
+                                <button type="button" class="btn-cart">
+                                    re order again
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-info-top">
+                                <h2 class="category-title" id="categoryOfProduct3"></h2>
+                                <div class="rating">
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="far fa-star"></i></span>
+                                    <span><i class="far fa-star"></i></span>
+
+                                </div>
+                            </div>
+                            <a href="#" class="product-name" id="nameOfTheProduct3" ></a>
+                            <p class="product-withoutDiscounts" id="actualPriceOfTheProduct3"></p>                   
+                        </div>
+                    </div>
+                    <!-- end of the single product -->
+
+                    <!-- single product -->
+                    <div class="product">
+                        <div class="product-content">
+                            <div class="product-img">
+                                <img src="assets/iphone_11.png" alt="Apple i phone">
+                            </div>
+                            <div class="product-btns">
+                                <button type="button" class="btn-cart">
+                                    re order again
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-info-top">
+                                <h2 class="category-title" id="categoryOfProduct4" ></h2>
+                                <div class="rating">
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href="#" class="product-name" id="nameOfTheProduct4"></a>
+                            <p class="product-price" id="actualPriceOfTheProduct4"></p>
+                            <P class="product-price" id="discountedPriceOfTheProduct4"></P>
+                        </div>
+                        <div class="off-info">
+                            <h2 class="category-title" id="discountedRateOfTheProduct4"></h2>
+                        </div>
+                    </div>
+                    <!-- end of the single product -->
+
+                    <!-- single product -->
+                    <div class="product">
+                        <div class="product-content">
+                            <div class="product-img">
+                                <img src="assets/on_sale_1.jpg" alt="Women's handbags">
+                            </div>
+                            <div class="product-btns">
+                                <button type="button" class="btn-cart">
+                                    re order again
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-info-top">
+                                <h2 class="category-title" id="categoryOfProduct5"></h2>
+                                <div class="rating">
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="far fa-star"></i></span>
+                                    <span><i class="far fa-star"></i></span>
+
+                                </div>
+                            </div>
+                            <a href="#" class="product-name" id="nameOfTheProduct5"></a>
+                            <p class="product-withoutDiscounts" id="actualPriceOfTheProduct5"></p>
+                        </div>
+                    </div>
+                    <!-- end of the single product -->
+
+                    <!-- single product -->
+                    <div class="product">
+                        <div class="product-content">
+                            <div class="product-img">
+                                <img src="assets/product_img_2.jpg" alt="Web Cam">
+                            </div>
+                            <div class="product-btns">
+                                <button type="button" class="btn-cart">
+                                    re order again
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-info-top">
+                                <h2 class="category-title" id="categoryOfProduct6"></h2>
+                                <div class="rating">
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href="#" class="product-name" id="nameOfTheProduct6"></a>
+                            <p class="product-withoutDiscounts" id="actualPriceOfTheProduct6"></p>
+                        </div>
+                    </div>
+                    <!-- end of the single product -->
+
+                    <!-- single product -->
+                    <div class="product">
+                        <div class="product-content">
+                            <div class="product-img">
+                                <img src="assets/product_img_5.jpg" alt="Smart speaker">
+                            </div>
+                            <div class="product-btns">
+                                <button type="button" class="btn-cart">
+                                    re order again
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-info-top">
+                                <h2 class="category-title" id="categoryOfProduct7"></h2>
+                                <div class="rating">
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="far fa-star"></i></span>
+                                    <span><i class="far fa-star"></i></span>
+                                    <span><i class="far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href="#" class="product-name" id="nameOfTheProduct7"></a>
+                            <p class="product-price" id="actualPriceOfTheProduct7"></p>
+                            <P class="product-price" id="discountedPriceOfTheProduct7"></P>
+                        </div>
+                        <div class="off-info">
+                            <h2 class="category-title" id="discountedRateOfTheProduct7"></h2>
+                        </div>
+                    </div>
+                    <!-- end of the single product -->
+
+                    <!-- single product -->
+                    <div class="product">
+                        <div class="product-content">
+                            <div class="product-img">
+                                <img src="assets/product-1.jpg" alt="Apple watch">
+                            </div>
+                            <div class="product-btns">
+                                <button type="button" class="btn-cart">
+                                    re order again
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-info-top">
+                                <h2 class="category-title" id="categoryOfProduct8"></h2>
+                                <div class="rating">
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href="#" class="product-name" id="nameOfTheProduct8"></a>
+                            <p class="product-price" id="actualPriceOfTheProduct8"></p>
+                            <P class="product-price" id="discountedPriceOfTheProduct8"></P>
+                        </div>
+                        <div class="off-info">
+                            <h2 class="category-title" id="discountedRateOfTheProduct8"></h2>
+                        </div>
+                    </div>
+                    <!-- end of the single product -->
+
+                    <!-- single product -->
+                    <div class="product">
+                        <div class="product-content">
+                            <div class="product-img">
+                                <img src="assets/lenovo%20laptop.png" alt="Lenovo laptop">
+                            </div>
+                            <div class="product-btns">
+                                <button type="button" class="btn-cart">
+                                    re order again
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-info-top">
+                                <h2 class="category-title" id="categoryOfProduct9"></h2>
+                                <div class="rating">
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href="#" class="product-name" id="nameOfTheProduct9"></a>
+                            <p class="product-withoutDiscounts" id="actualPriceOfTheProduct9"></p>
+                        </div>
+                    </div>
+                    <!-- end of the single product -->
+
+                    <!-- single product -->
+                    <div class="product">
+                        <div class="product-content">
+                            <div class="product-img">
+                                <img src="assets/smart-phone.png" alt="Smart Phone">
+                            </div>
+                            <div class="product-btns">
+                                <button type="button" class="btn-cart">
+                                    re order again
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-info-top">
+                                <h2 class="category-title" id="categoryOfProduct10"></h2>
+                                <div class="rating">
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href="#" class="product-name" id="nameOfTheProduct10"></a>
+                            <p class="product-withoutDiscounts" id="actualPriceOfTheProduct10"></p>
+
+                        </div>
+                    </div>
+                    <!-- end of the single product -->
+
+                    <!-- single product -->
+                    <div class="product">
+                        <div class="product-content">
+                            <div class="product-img">
+                                <img src="assets/samsungTV.png" alt="Smart TV">
+                            </div>
+                            <div class="product-btns">
+                                <button type="button" class="btn-cart">
+                                    re order again
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-info-top">
+                                <h2 class="category-title" id="categoryOfProduct11"></h2>
+                                <div class="rating">
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href="#" class="product-name" id="nameOfTheProduct11"></a>
+                            <p class="product-price" id="actualPriceOfTheProduct11"></p>
+                            <P class="product-price" id="discountedPriceOfTheProduct11"></P>
+                        </div>
+                        <div class="off-info">
+                            <h2 class="category-title" id="discountedRateOfTheProduct11"></h2>
+                        </div>
+                    </div>
+                    <!-- end of the single product -->
+
+                    <!-- single product -->
+                    <div class="product">
+                        <div class="product-content">
+                            <div class="product-img">
+                                <img src="assets/men's%20jacket.png" alt="Men's Jacket">
+                            </div>
+                            <div class="product-btns">
+                                <button type="button" class="btn-cart">
+                                    re order again
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-info-top">
+                                <h2 class="category-title" id="categoryOfProduct12"> </h2>
+                                <div class="rating">
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="far fa-star"></i></span>
+                                    <span><i class="far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href="#" class="product-name" id="nameOfTheProduct12"></a>
+                            <p class="product-withoutDiscounts" id="actualPriceOfTheProduct12"></p>
+
+                        </div>
+                    </div>
+                    <!-- end of the single product -->                
+                </div>
+            </div>
+        </div>
+
+        <!--Activation form to subscribe for a personalized news letter-->
+        <div class="activation-form">
+            <h2 class="subscribe-title">Subscribe</h2>
+            <p>Subscribe to our newsletter and stay updated.</p>
+            <div class="form1">
+                <form action="mailto:inuka.rodrigo@gmail.com" method="get" id="userForm">
+                    <div>
+                        <input id="form-name" name="form-name" type="text" placeholder="Enter your full name">
+                    </div>
+                    <div>
+                        <input id="form-email" name="form-email" type="text" placeholder="Enter your email address">
+                    </div>
+                    <button class= "form-button" type="form-submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        
+
+        <!--Activation form validation using java script-->
+        <script>
+            const name = document.getElementById('form-name');
+            const email = document.getElementById('form-email');
+            const form = document.getElementById('userForm');
+            const emailStructure = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
+
+            //When user click the submit button,following code will run
+            form.addEventListener('submit',(e)=>{
+                if(name.value==='' || name.value==null){
+                    if(email.value==='' || email.value==null){
+                        alert('Name and email both must be filled out.');
+                    }
+                    else if(emailStructure.test(email.value)!=true){
+                        alert('Name must be filled out and invalid email ID');
+                    }else{
+                        alert('Name must be filled out.');
+                    }
+                    e.preventDefault(); //This will prevent from submitting if the textFields are empty or invalid
+                }
+                else{
+                    if(email.value==='' || email.value==null){
+                        alert('Enter an email id.');
+                        e.preventDefault();
+                    }else if(emailStructure.test(email.value)!=true){
+                        alert('Invalid email ID');
+                        e.preventDefault();
+                    }else{
+                        //Success
+                        alert('Dear '+name.value+', you have successfully subscribed for a personalized newsletter.')
+                    }
+                }              
+            });
+        </script>
+
+        <!--Script to retrieve information from the xml file-->
+        <script>
+            /*Important notice 
+          To retrieve the xml information,html web page should open with live server
+          Otherwise,this will not work
+        */
+            
+            let xmlContent = '';
+            let allTheProducts = document.getElementById('p-items');
+            //Read the xml string from the xml file then provide a function which is going to be called whenever the result will be returned and this function has 'response'
+            //as an argument
+            fetch('listings.xml').then((response)=>{
+                //Get the text from the response
+                response.text().then((xml)=>{
+                    xmlContent = xml;
+                    let parser = new DOMParser();
+                    let xmlDOM = parser.parseFromString(xmlContent, 'application/xml');
+                    let product_info = xmlDOM.querySelectorAll('product'); //Get information of all the products
+                    //To iterate through each product element
+                    let counter = 1;
+                    let commonNameCategory = 'categoryOfProduct';//CommonName mean the common part of the id name of each category,id names of category goes as categoryOfProduct1,categoryOfProduct2,..
+                    let commonNameProduct = 'nameOfTheProduct';
+                    let commonNameActualPrice = 'actualPriceOfTheProduct';
+                    let commonNameDiscountedPrice = 'discountedPriceOfTheProduct';
+                    let commonNameDiscountRate = 'discountedRateOfTheProduct'
+                    product_info.forEach(productXmlNode =>{
+                        //Retrieve and display details under category section
+                        let categoryId = commonNameCategory.concat(counter);
+                        document.getElementById(categoryId).innerHTML = productXmlNode.children[0].innerHTML;
+
+                        //Retrieve and display details for name of the product
+                        let productNameId = commonNameProduct.concat(counter);
+                        document.getElementById(productNameId).innerHTML = productXmlNode.children[1].innerHTML;
+
+                        //Retrieve and display details for price of the product
+                        let productPriceId = commonNameActualPrice.concat(counter);
+                        document.getElementById(productPriceId).innerHTML = productXmlNode.children[2].innerHTML;
+
+                        //Retrieve and display details of discounted price of the product
+                        let productDiscountedPriceId = commonNameDiscountedPrice.concat(counter);
+                        if(document.getElementById(productDiscountedPriceId)){//Checks if the the id exist,all products dont get discounts
+                            document.getElementById(productDiscountedPriceId).innerHTML = productXmlNode.children[3].innerHTML;
+                        }
+
+                        //Retrieve and display details of discounted price rate of the product
+                        let productDiscountedPriceRateId = commonNameDiscountRate.concat(counter)
+                        if(document.getElementById(productDiscountedPriceRateId)){//Checks if the the id exist,all products dont get discount rate
+                            document.getElementById(productDiscountedPriceRateId).innerHTML = productXmlNode.children[4].innerHTML;
+                        }
+                        counter++;
+
+                    });
+                });
+            });
+        </script>
+        
+        <footer>
+            <div class="footerContainer">
+                <div class="row">
+                    <div class="footer1">
+                        <img src="assets/logoWhite.svg" alt="logo">
+
+                    </div>
+                    <div class="footer2">
+                        <h3>&#169; 2022 Buyanything.</h3>
+                        <p>All Rights Reserved.</p>
+                    </div>
+                    <div class="footer3">
+                        <h3>Useful links</h3>
+                        <ul class="footerLinks">
+                            <li><a href="main.html">Home</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer4">
+                        <h3>Contact Us</h3>
+                        <ul class="footerLinks">
+                            <li><a href="editorsPage/editorsPage4.html">Editors Page</a></li>
+                            <li><a href="aboutUs.html">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

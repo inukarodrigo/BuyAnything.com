@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>BuyAnything</title>
+        <link rel="icon" href="assets/logo.png" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+            body {font-family: Arial, Helvetica, sans-serif;
+                background-color: #faeeee;}
+
+            #signupForm {width: 500px;
+                height: 720px;
+                position: relative;
+                margin: 6% auto;
+                background: #fff;
+                padding: 12px;
+                overflow: hidden;}
+
+            #signupForm input[type=text], [type=number], [type=password] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: none;
+                border-bottom: 2px solid ;
+                box-sizing: border-box;
+            }
+
+            #loginBtn {
+                background-color: #04AA6D;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+            }
+
+            #loginBtn:hover {
+                opacity: 0.8;
+            }
+
+
+
+            .imgcontainer {
+                text-align: center;
+                margin: 12px 0 06px 0;
+            }
+
+            img.avatar {
+                width: 20%;
+                border-radius: 10%;
+            }
+
+            .signup {
+                padding: 16px;
+            }
+
+
+            }
+        </style>
+        <script>
+            function validateForm(){
+                let uname = document.Sign_up_Form.uname;
+                let age = document.Sign_up_Form.age;
+                let mobilenumber = document.Sign_up_Form.mobilenumber;
+                let address = document.Sign_up_Form.address;
+                let email = document.Sign_up_Form.email;
+                let password = document.Sign_up_Form.password;
+                let Preference1 = document.Sign_up_Form.Preference1;			 
+                let Preference2 = document.Sign_up_Form.Preference2;
+                let Preference3 = document.Sign_up_Form.Preference3;			 
+
+
+                if (uname.value =="") {    
+                    alert("Name is required");    
+                }
+                else if (age.value =="") {    
+                    alert("Age is required");    
+                }
+                else if (mobilenumber.value =="") {    
+                    alert("Mobile Number is required");    
+                }
+                else if (address.value =="") {    
+                    alert("Address is required");    
+                }
+                else if (email.value =="") {    
+                    alert("Email is required");    
+                }
+                else if (password.value =="") {    
+                    alert("Password is required");    
+                }
+                else if (Preference1.value.length <= 0) {    
+                    alert("Choose a Preference 1");
+                }
+                else if (Preference2.value.length <= 0) {    
+                    alert("Choose a Preference 2");
+                }
+                else if (Preference3.value.length <= 0) {    
+                    alert("Choose a Preference 3");
+                }
+
+                else {
+                    alert("Dear Customer, Thank you for signing up with us, the recommended results will be shown in a while.");
+                    window.location.href = "main.html";
+
+                }
+            }
+
+
+        </script>	
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <a href="main.html"><img class="logo" src="assets/logoBlack.svg" alt="website logo"></a>
+            </div>
+        </header>
+        <h2 style="text-align:center;">Sign up Form</h2>
+
+        <form name="Sign_up_Form" id="signupForm">
+            <div class="imgcontainer">
+                <img src="assets/avatar.jpg" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="signup">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" >
+
+                <label for="age"><b>Age</b></label>
+                <input type="number" placeholder="Enter Age" name="age" >
+
+                <label for="mobilenumber"><b>Mobile Number</b></label>
+                <input type="number" placeholder="Enter Mobile Number" name="mobilenumber" >
+
+                <label for="address"><b>Address</b></label>
+                <input type="text" placeholder="Enter Address" name="address" >
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter example@mail.com" name="email" >
+
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Confirm Password" name="password" >
+                <br>
+                <label><b> Preference 1</b> </label>
+                <input type="radio" name="Preference1" value="m">
+                Clothing
+                <input type="radio" name="Preference1" value="w">
+                Fashion
+                <input type="radio" name="Preference1" value="k">
+                Electronics
+
+                <br>
+                <label><b> Preference 2</b> </label>
+                <input type="radio" name="Preference2" value="b">
+                Adidas
+                <input type="radio" name="Preference2" value="c">
+                Nike
+                <input type="radio" name="Preference2" value="d">
+                AirJorden
+
+
+                <br>
+                <label><b>  Preference 3</b> </label>
+                <input type="radio" name="Preference3" value="x">
+                Used
+                <input type="radio" name="Preference3" value="y">
+                New
+                <input type="radio" name="Preference3" value="z">
+                Both
+
+                <button onclick="validateForm()" type="button" id="loginBtn">Login</button>
+            </div>
+
+        </form>
+        <footer>
+            <div class="footerContainer">
+                <div class="row">
+                    <div class="footer1">
+                        <img src="assets/logoWhite.svg" alt="logo">
+                    </div>
+                    <div class="footer2">
+                        <h3>&#169; 2022 Buyanything.</h3>
+                        <p>All Rights Reserved.</p>
+                    </div>
+                    <div class="footer3">
+
+                    </div>
+                    <div class="footer4">
+                        <h3>Contact Us</h3>
+                        <ul class="footerLinks">
+                            <li><a href="editorsPage/editorsPage1.html">Editors Page</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

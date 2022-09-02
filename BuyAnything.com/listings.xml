@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="xml/CWListingPage(CSS for xml).css"?>
+
+
+<purchasedOrders>
+    <product>
+        <category>LIFESTYLE</category>
+        <name>addidas Men's Grand Court SE Sneaker</name>
+        <actualPrice>Rs.45,000</actualPrice>
+        <discountedPrice>Rs.42,500</discountedPrice>
+        <discountRate>7% off</discountRate>
+    </product>
+
+    <product>
+        <category>HEADPHONE</category>
+        <name>Sony ZX Series Wired On-Ear Headphones with Mic, Black MDR-ZX110AP</name>
+        <actualPrice>Rs.75,000</actualPrice>
+        <discountedPrice></discountedPrice>
+        <discountRate></discountRate>
+    </product>
+
+    <product>
+        <category>LONG-SLEEVE T-SHIRT</category>
+        <name>Gildan Men's Crew T-Shirt</name>
+        <actualPrice>Rs.2300</actualPrice>
+        <discountedPrice></discountedPrice>
+        <discountRate></discountRate>
+    </product>
+
+    <product>
+        <category>iPHONE</category>
+        <name>Apple iPhone 11, 64GB, White - Unlocked (Renewed Premium)</name>
+        <actualPrice>Rs.380,000</actualPrice>
+        <discountedPrice>Rs.361,000</discountedPrice>
+        <discountRate>5% off</discountRate>
+    </product>
+
+    <product>
+        <category>HANDBAG</category>
+        <name>ALDO Women's Jerilini Top Handle Bag</name>
+        <actualPrice>Rs.4,500</actualPrice>
+        <discountedPrice></discountedPrice>
+        <discountRate></discountRate>
+    </product>   
+
+    <product>
+        <category>WEBCAM</category>
+        <name>Webcam, HD Webcam 1080P with Privacy Shutter and Tripod Stand, Pro Streaming Web Camera with Microphone, Widescreen USB Computer Camera for PC Mac Laptop Desktop Video Calling Conferencing Recording</name>
+        <actualPrice>Rs.23,400</actualPrice>
+        <discountedPrice></discountedPrice>
+        <discountRate></discountRate>
+    </product>    
+
+    <product>
+        <category>Echo Dot</category>
+        <name>Bose Home Speaker 300: Bluetooth Smart Speaker with Amazon Alexa Built-in, Silver</name>
+        <actualPrice>Rs.52,300</actualPrice>
+        <discountedPrice>Rs.44,455</discountedPrice>
+        <discountRate>15% off</discountRate>
+    </product>
+
+    <product>
+        <category>SMART WATCH</category>
+        <name>Apple Watch Series 3 (GPS + Cellular, 38MM) - Space Gray Aluminum Case with White Sport Band (Renewed)</name>
+        <actualPrice>Rs.79,999</actualPrice>
+        <discountedPrice>Rs.76,799</discountedPrice>
+        <discountRate>4% off</discountRate>
+    </product>
+
+    <product>
+        <category>LAPTOP</category>
+        <name>Lenovo IdeaPad 3 Laptop, 15.6" FHD Display, AMD Ryzen 5 5500U, 8GB RAM, 512GB Storage, AMD Radeon 7 Graphics, Windows 11 Home</name>
+        <actualPrice>Rs.105,999</actualPrice>
+        <discountedPrice></discountedPrice>
+        <discountRate></discountRate>
+    </product> 
+
+    <product>
+        <category>SMART PHONE</category>
+        <name>Google Pixel 6 – 5G Android Phone - Unlocked Smartphone with Wide and UltraWide Lens - 128GB</name>
+        <actualPrice>Rs.56,499</actualPrice>
+        <discountedPrice></discountedPrice>
+        <discountRate></discountRate>
+    </product> 
+
+    <product>
+        <category>SAMSUNG TV</category>
+        <name>SAMSUNG 32-inch Class FRAME QLED LS03 Series - FHD Dual LED Quantum HDR Smart TV with Alexa Built-in (QN32LS03TBFXZA, 2020 Model)</name>
+        <actualPrice>Rs.523,000</actualPrice>
+        <discountedPrice>Rs.470,700</discountedPrice>
+        <discountRate>10% off</discountRate>
+    </product> 
+
+    <product>
+        <category>Polar Jacket</category>
+        <name>Men's Waterproof Rain Jacket Outdoor Lightweight Softshell Raincoat for Hiking Travel</name>
+        <actualPrice>Rs.5,500</actualPrice>
+        <discountedPrice></discountedPrice>
+        <discountRate></discountRate>
+    </product> 
+</purchasedOrders>

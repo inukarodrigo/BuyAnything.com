@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>BuyAnything</title>
+        <link rel="icon" href="assets/logo.png" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <script>
+            setTimeout(function () {
+                window.open('main.html', '_blank');
+            }, 5000);
+        </script>
+        <header>
+            <div class="navbar" style="background: #faeeee">
+                <a href="main.html"><img class="logo" src="assets/logoBlack.svg" alt="website logo"></a>
+            </div>
+        </header>
+        <div class="presentation">
+            <div class="overlay">
+                <h1 id="header">Buyanything</h1>
+                <h3>E-Commerece</h3>
+                <p>Student 1 Puspasothy Seyon</p>
+                <p>Student 2 Mishaal Rifath</p>
+                <p>Student 3 B.A.D Yohan</p>
+                <p>Student 4 M.Inuka Rodrigo</p>
+                <br>
+                <button onclick="setTimeout(function () {
+                                 window.open('main.html', '_blank');
+                                 }, 5000)">Let's Begin!</button>
+            </div>
+        </div>
+        <footer>
+            <div class="footerContainer">
+                <div class="row">
+                    <div class="footer1">
+                        <img src="assets/logoWhite.svg" alt="logo">
+                    </div>
+                    <div class="footer2">
+                        <h3>&#169; 2022 Buyanything.</h3>
+                        <p>All Rights Reserved.</p>
+                    </div>
+                    <div class="footer3">
+
+                    </div>
+                    <div class="footer4">
+                        <h3>Contact Us</h3>
+                        <ul class="footerLinks">
+                            <li><a href="editorsPage/editorsPage1.html">Editors Page</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <style>
+        .presentation {
+            text-align: center;
+            width: 100%;
+            height: auto;
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+            overflow: hidden;
+            border-radius: 0 0 85% 85% / 30%;
+            margin-bottom: 150px;
+        }
+
+        .presentation .overlay{
+            width: 100%;
+            height: 100%;
+            padding: 50px;
+            color: #000;
+            text-shadow: 1px 1px 1px #333;
+            background: #faeeee;
+        }
+
+        .presentation h1 {
+            font-size: 80px;
+            margin-bottom: 30px;
+        }
+
+        .presentation h3,.presentation p {
+            margin-bottom: 30px;
+        }
+
+        button {
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            color: #333;
+            background: #fff;
+            margin-bottom: 50px;
+            box-shadow: 0 3px 20px 0 #0000003b;
+        }
+
+        button:hover{
+            cursor: pointer;
+        }
+    </style>

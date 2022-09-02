@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>BuyAnything</title>
+        <link rel="icon" href="assets/logo.png" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script defer src="script.js"></script>
+    </head>
+    <body>
+        <!--Header/Navigation-->
+        <header>
+            <div class="navbar">
+                <a href="main.html"><img class="logo" src="assets/logoBlack.svg" alt="website logo"></a>
+                <nav>
+                    <ul class="links" id="menuItems">
+                        <li><a href="productPage.html">Shop</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="listings.html">Listings</a></li>
+                        <li><a href="aboutUs.html">About Us</a></li>
+                    </ul>
+                </nav>
+                <img class="searchIcon" src="assets/search.svg" alt="search button">
+                <img class="menuIcon" src="assets/menu.svg" alt="menu button" onclick="menuToggle()">
+            </div>
+        </header>
+        <!--Preview Section-->
+        <div class="preview">
+            <div class="row">
+                <div class="previewCol">
+                    <h1>Buyanything</h1>
+                    <p>A revolutionary new way to shop online!</p>
+                    <a href="productPage.html" class="button">Discover More &#8634;</a>
+                </div>
+                <div class="previewCol">
+                    <img src="assets/model.png" alt="product preview">
+                </div>
+            </div>
+        </div>
+        <!--Video Section-->
+        <div class="row">
+            <div class="video">
+                <h2 id="header">What We Do</h2>
+                <video controls id="demoReel">
+                    <source src="assets\teaser.mp4" type="video/mp4">
+                    Your browser doesn't support the video tag.
+                </video>
+                <p><br>Buyanything is an interactive AI powered web application which is capable of better understanding our customer search queries and what is the reason they are looking for a particular product. This website uses AI and machine learning to predict the context from their customers’ search queries and suggesting the products based on customers’ past behavior.</p>
+                <p><br>Interested? Sign up with us now and experience the technology for yourself!</p>
+                <div class="signupButton"><a href="signup.html" class="button">Sign Up &#8634;</a></div>
+            </div>
+        </div>
+        <!--Categories-->
+        <div class="catergories">
+            <div class="collection">
+                <h2 id="header">Our Collections</h2>
+                <div class="row">
+                    <div class="category">
+                        <img id="ctgPreview" src="assets/clothing.jpg" alt="Preview of clothing available">
+                        <h4>Clothing</h4>
+                    </div>
+                    <div class="category">
+                        <img id="ctgPreview" src="assets/electronics2.jpg" alt="Preview of electronics available">
+                        <h4>Electronics</h4>
+                    </div>
+                    <div class="category">
+                        <img id="ctgPreview" src="assets/accessories2.jpg" alt="Preview of accessories available">
+                        <h4>Accessories</h4>
+                    </div>
+                </div>
+                <div class="shopButton"><a href="productPage.html" class="button">Shop Now &#8634;</a></div>
+            </div>
+        </div>
+        <!--Quiz Section-->
+        <div class="quiz">
+            <h2 id="header">Take a Quick Quiz</h2>
+            <p>Take part in a quick quiz and earn a chance to win points for your next purchase with us! </p>
+            <button type="button" id="quizBtn" onclick="startQuiz()">Take Quiz</button>
+        </div>
+        <!--Form Section-->
+        <div class="form">
+            <h2 id="header">Help Us Improve</h2>
+            <p>Got any feedback or suggestions for us? Help us improve our website by filling out a quick form! <br>Your time is greatly appreciated!</p>
+
+            <form id="userForm">
+                <h2>Feedback Form</h2>
+                <div class="inputControl">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type=text placeholder="Enter Name">
+                </div>
+                <div class="inputControl">
+                    <label for="email">Email Address</label>
+                    <input id="email" name="email" type=text placeholder="Enter Email Address">
+                </div>
+                <div class="inputControl">
+                    <label for="comments">Comments</label>
+                    <textarea rows="4" cols="20" id="comments" placeholder="Enter Comments Here"></textarea>
+                </div>
+                <div class="inputControl">
+                    <label for="rating">Rating</label>
+                    <select name="rating" id="rating">
+                        <option value="excellent">Excellent</option>
+                        <option value="good">Good</option>
+                        <option value="average">Average</option>
+                        <option value="bad">Bad</option>
+                        <option value="terrible">Terrible</option>
+                    </select>
+                </div>
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+                <div id="formError"></div>
+            </form>
+        </div>
+        <!--Footer-->
+        <footer>
+            <div class="footerContainer">
+                <div class="row">
+                    <div class="footer1">
+                        <img src="assets/logoWhite.svg" alt="website logo">
+
+                    </div>
+                    <div class="footer2">
+                        <h3>&#169; 2022 Buyanything.</h3>
+                        <p>All Rights Reserved.</p>
+                    </div>
+                    <div class="footer3">
+                        <h3>Useful links</h3>
+                        <ul class="footerLinks">
+                            <li><a href="main.html">Home</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer4">
+                        <h3>Contact Us</h3>
+                        <ul class="footerLinks">
+                            <li><a href="editorsPage/editorsPage2.html">Editors Page</a></li>
+                            <li><a href="aboutUs.html">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
