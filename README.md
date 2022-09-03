@@ -10,9 +10,10 @@ experience, ease of purchase, comprehensive customer care and a
 hassle-free shopping and returns experience. 
 
 ## Technologies
-![HTML](https://img.shields.io/badge/HTML-100301?style=for-the-badge&logo=HTML&logoColor=black)
-![CSS](https://img.shields.io/badge/CSS-494972?style=for-the-badge&logo=CascadingStyleSheet&logoColor=black)
+
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](	https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JS](https://img.shields.io/badge/JS-E42652?style=for-the-badge&logo=JavaScript&logoColor=black)
 
 ## Platforms
-![VSCode](https://img.shields.io/badge/VSCODE-3D6139?style=for-the-badge&logo=VisualStudioCode&logoColor=white)
+![VSCODE](https://img.shields.io/badge/VSCode-158E8A?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
